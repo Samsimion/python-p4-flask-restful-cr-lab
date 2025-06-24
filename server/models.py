@@ -7,7 +7,7 @@ db = SQLAlchemy()
 class Plant(db.Model, SerializerMixin):
     __tablename__ = 'plants'
     name = db.Column(db.String ,nullable=False)
-    image = db.Column(db.String, nullable=False)
-    price= db.Column(Numeric(10,2), nullable=False)
+    image = db.Column(db.String, nullable=True)
+    price= db.Column(Numeric(10,2), nullable=True)
 
     id = db.Column(db.Integer, primary_key=True)
